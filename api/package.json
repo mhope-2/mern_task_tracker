@@ -19,14 +19,19 @@
         "cors": "^2.8.5",
         "dotenv": "^16.4.7",
         "ejs": "^3.1.10",
-        "express": "^4.21.2",
+        "express": "^4.22.2",
         "express-formidable": "^1.2.0",
-        "express-session": "^1.18.1",
+        "express-session": "^1.18.2",
         "jsonwebtoken": "^9.0.2",
-        "mongoose": "^8.9.2",
-        "morgan": "^1.10.0",
-        "multer": "^1.4.4",
+        "mongoose": "^8.24.0",
+        "morgan": "^1.10.1",
+        "multer": "^2.1.1",
         "promisify": "0.0.3",
         "tslib": "^2.8.1"
+    },
+    "overrides": {
+        "axios": "^1.17.0",
+        "quill": "2.0.2",
+        "serialize-javascript": "^7.0.5"
     }
 }
