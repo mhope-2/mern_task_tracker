@@ -1,0 +1,28 @@
+version: 2
+
+updates:
+  # Keep the Express/Mongo API and its lockfile current. Security updates
+  # are opened as soon as an advisory is published; version updates daily.
+  - package-ecosystem: npm
+    directory: "/api"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    groups:
+      routine-updates:
+        applies-to: version-updates
+        update-types:
+          - minor
+          - patch
+        patterns:
+          - "*"
+      security-updates:
+        applies-to: security-updates
+        patterns:
+          - "*"
+
+  # Keep actions used by CI and automation current as well.
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
